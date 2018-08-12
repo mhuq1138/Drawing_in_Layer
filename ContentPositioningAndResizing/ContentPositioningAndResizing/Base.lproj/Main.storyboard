@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContentPositioningAndResizing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RjX-z0-Rby">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT8-fl-z89">
+                                <rect key="frame" x="20" y="83" width="335" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="aC4-0m-3GC"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-df-Sj0">
+                                <rect key="frame" x="20" y="367" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Center"/>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                    <segment title="Resize"/>
+                                </segments>
+                                <connections>
+                                    <action selector="contentsGravityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="o1V-W6-fzA"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contentsGravity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxt-BR-2XC">
+                                <rect key="frame" x="20" y="338" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rnw-NR-NY2">
+                                <rect key="frame" x="20" y="439" width="335" height="29"/>
+                                <segments>
+                                    <segment title="0.0, 0.0, 1.0, 1.0"/>
+                                    <segment title="0.4, 0.3, 0.5, 0.8"/>
+                                </segments>
+                                <connections>
+                                    <action selector="contentsRectChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jIf-sV-U99"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contentsRect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-7p-5J4">
+                                <rect key="frame" x="20" y="410" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-6G-k1Z">
+                                <rect key="frame" x="20" y="511" width="335" height="29"/>
+                                <segments>
+                                    <segment title="0.0, 0.0, 1.0, 1.0"/>
+                                    <segment title="0.4, 0.4, 0.2, 0.2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="contentsCenterChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MUS-gt-sN7"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contentsCenter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl6-tH-xHZ">
+                                <rect key="frame" x="20" y="482" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ka7-ld-ZNE">
+                                <rect key="frame" x="20" y="50" width="335" height="29"/>
+                                <segments>
+                                    <segment title="File Image"/>
+                                    <segment title="Drawn Image"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="nuW-vq-o38"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ibY-6G-k1Z" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="5YJ-cK-MJD"/>
+                            <constraint firstAttribute="height" constant="240" id="6N9-k8-dad"/>
+                            <constraint firstItem="Zl6-tH-xHZ" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="DOZ-9U-NGY"/>
+                            <constraint firstItem="Rnw-NR-NY2" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="HKd-If-VZP"/>
+                            <constraint firstItem="vT8-fl-z89" firstAttribute="top" secondItem="Ka7-ld-ZNE" secondAttribute="bottom" constant="5" id="IUL-dL-wNK"/>
+                            <constraint firstItem="f5Z-7r-vYR" firstAttribute="trailing" secondItem="X4t-df-Sj0" secondAttribute="trailing" constant="20" id="LGM-Ox-ho1"/>
+                            <constraint firstItem="Mxt-BR-2XC" firstAttribute="top" secondItem="vT8-fl-z89" secondAttribute="bottom" constant="15" id="Q46-2Q-Woz"/>
+                            <constraint firstItem="f5Z-7r-vYR" firstAttribute="trailing" secondItem="ibY-6G-k1Z" secondAttribute="trailing" constant="20" id="SHA-1w-3l9"/>
+                            <constraint firstItem="f5Z-7r-vYR" firstAttribute="trailing" secondItem="vT8-fl-z89" secondAttribute="trailing" constant="20" id="UjO-0y-nCO"/>
+                            <constraint firstItem="Ka7-ld-ZNE" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="VwQ-o4-ljj"/>
+                            <constraint firstItem="ibY-6G-k1Z" firstAttribute="top" secondItem="Zl6-tH-xHZ" secondAttribute="bottom" constant="8" id="Wcd-pX-hER"/>
+                            <constraint firstItem="f5Z-7r-vYR" firstAttribute="trailing" secondItem="Rnw-NR-NY2" secondAttribute="trailing" constant="20" id="XD3-ph-wyB"/>
+                            <constraint firstItem="Ka7-ld-ZNE" firstAttribute="top" secondItem="f5Z-7r-vYR" secondAttribute="top" constant="30" id="ZKx-bv-Ua9"/>
+                            <constraint firstItem="X4t-df-Sj0" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="bY8-fr-8jn"/>
+                            <constraint firstItem="X4t-df-Sj0" firstAttribute="top" secondItem="Mxt-BR-2XC" secondAttribute="bottom" constant="8" id="gWJ-qh-ZJg"/>
+                            <constraint firstItem="Rnw-NR-NY2" firstAttribute="top" secondItem="hwj-7p-5J4" secondAttribute="bottom" constant="8" id="iih-nx-kVj"/>
+                            <constraint firstItem="Zl6-tH-xHZ" firstAttribute="top" secondItem="Rnw-NR-NY2" secondAttribute="bottom" constant="15" id="pZP-8J-MM6"/>
+                            <constraint firstItem="hwj-7p-5J4" firstAttribute="top" secondItem="X4t-df-Sj0" secondAttribute="bottom" constant="15" id="wW1-mR-HZa"/>
+                            <constraint firstItem="Mxt-BR-2XC" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="xmm-Bf-SoV"/>
+                            <constraint firstItem="hwj-7p-5J4" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="ysN-Lo-xsg"/>
+                            <constraint firstItem="vT8-fl-z89" firstAttribute="leading" secondItem="f5Z-7r-vYR" secondAttribute="leading" constant="20" id="zJW-KO-5js"/>
+                            <constraint firstItem="f5Z-7r-vYR" firstAttribute="trailing" secondItem="Ka7-ld-ZNE" secondAttribute="trailing" constant="20" id="zVs-CL-LvM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f5Z-7r-vYR"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewForLayer" destination="vT8-fl-z89" id="J70-Oz-wBU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
